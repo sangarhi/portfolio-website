@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Learning Bootstrap v with Sass</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/fontawesome.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendors/css/glightbox.min.css">
+</head>
+
+<body>
+    <!-- ///////////////////// NAVBAR ///////////////// -->
+    <nav class="navbar navbar-expand-lg navbar-dark menu shadow fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="fs-4 fw-bold font-monospace">Sandra</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Servicios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Testimonios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Portfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacto</a>
+                    </li>
+                </ul>
+                <button type="button" class="rounded-pill btn-rounded">+34 6XXXXXXXX
+                    <span>
+                        <i class="fas fa-phone-alt"></i>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!--/////////////////////// INTRO-SECTION //////////////////-->
+    <section id="home" class="intro-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <!-- Intro Content-->
+                <div class="col-md-6 intros">
+                    <h1 class="display-2">
+                        <span class="display-2--intro">Hey!, Soy Sandra</span>
+                        <span class="display-2--description lh-base">This is a multi-purpose responsive layout created
+                            with bootstrap v5. (Here you can place your description text)</span>
+                    </h1>
+                    <button type="button" class="rounded-pill btn-rounded">Get in Touch
+                        <span>
+                            <i class="fas fa-arrow-right"></i>
+                        </span>
+                    </button>
+                </div>
+                <!-- Content of the image / video -->
+                <div class="col-md-6 intros text-end">
+                    <div class="video-box">
+                        <img src="images/intro-section-image.png" alt="Video illustration" class="img-fluid">
+                        <a href="#" class="glightbox">
+                            <span>
+                                <i class="fas fa-play-circle"></i>
+                            </span>
+                            <span class="border-animation border-animation--border-1"></span>
+                            <span class="border-animation border-animation--border-2"></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#fff" fill-opacity="1"
+                d="M0,128L34.3,149.3C68.6,171,137,213,206,240C274.3,267,343,277,411,240C480,203,549,117,617,117.3C685.7,117,754,203,823,224C891.4,245,960,203,1029,202.7C1097.1,203,1166,245,1234,261.3C1302.9,277,1371,267,1406,261.3L1440,256L1440,320L1405.7,320C1371.4,320,1303,320,1234,320C1165.7,320,1097,320,1029,320C960,320,891,320,823,320C754.3,320,686,320,617,320C548.6,320,480,320,411,320C342.9,320,274,320,206,320C137.1,320,69,320,34,320L0,320Z">
+            </path>
+        </svg>
+    </section>
+
+    <script src="/assets/vendors/js/glightbox.min.js"></script>
+    <script type="text/javascript">
+        const lightbox = GLightbox({
+            'href': 'https://vimeo.com/37733722',
+            'type': 'video',
+            'source': 'youtube', //vimeo, youtube or local
+            'width': 900,
+            'autoPlayVideos': true
+        });
+    </script>
+    <script src="/assets/js/bootstrap.bundle.js"></script>
+</body>
+
+</html>
