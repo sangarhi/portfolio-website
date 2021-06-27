@@ -1,5 +1,6 @@
 @use '../custom' as *;
 
+
 .display-2 {
     margin-bottom: 1rem;
     text-transform: capitalize;
@@ -24,4 +25,54 @@
             display: inline-block;
         }
     }
+}
+
+//DISPLAY-4
+.display-4 {
+    font-family: 'Poppins', sans-serif;
+
+    &--title {
+        font-size: 1.5rem;
+        text-transform: capitalize;
+        font-weight: 600;
+        font-family: 'Poppins', sans-serif;
+        display: inline-block;
+        background-image: linear-gradient(to right, $primary, $secondary);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        
+        @include media-breakpoint-up(lg) {
+            font-size: 1.8rem;
+        }
+    }
+}
+
+// HEADING LINE
+.heading-line::before {
+    content: "";
+    width: 10rem;
+    height: .15rem;
+    display: block;
+    margin: 0 auto;
+    background-color: $primary;
+}
+
+.heading-line::after {
+    content: "";
+    width: 2rem;
+    height: .2rem;
+    padding-top: .5rem ;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    background-color: $primary;
+}
+
+
+
+//BORDER-RIGHT
+.border-right {
+    border-right: .1rem solid $gray-300;
+    height: 100%;
 }

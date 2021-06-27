@@ -32,6 +32,7 @@
     &:hover {
         @include gradient;
         color: $white;
+        transition: all 0.3s;
 
         span {
             background-color: rgba($black, .6);
