@@ -10978,4 +10978,34 @@ textarea.form-control-lg {
   padding: 0 1rem;
 }
 
+.testimonials {
+  position: relative;
+  padding: 0;
+  background: linear-gradient(to right, rgba(153, 38, 240, 0.95), rgba(209, 34, 227, 0.95));
+}
+.testimonials--card {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 2rem 1.25rem;
+  border-radius: 0.625rem;
+  height: auto;
+  text-align: center;
+}
+.testimonials--card i {
+  font-size: 1.5rem;
+  color: rgba(153, 38, 240, 0.7);
+}
+.testimonials--card .ratings i {
+  color: rgba(153, 38, 240, 0.7);
+  font-size: 1rem;
+}
+.testimonials--picture {
+  width: 6rem;
+  height: 8rem;
+  position: absolute;
+}
+.testimonials--picture img {
+  object-fit: cover;
+  margin: auto;
+}
+
 /*# sourceMappingURL=style.css.map */
