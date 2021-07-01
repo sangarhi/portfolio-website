@@ -23,23 +23,44 @@
             i {
                 color: rgba($primary, .7);
                 font-size: 1rem;
+                padding: 1.3rem 0;
             }
         }
     }
 
     &--picture {
-        width: 6rem;
-        height: 8rem;
-        position: absolute;
+       
+        position: relative;
+        display:flex;
+        justify-content: center;
+        transform: translateY(-50%);
 
         img {
+            float: left;
+            width:  100px;
+            height: 100px;
             object-fit: cover;
-            margin: auto;
+            border:.325rem solid rgba($primary, .7);
 
         }
+    }
 
     &--name {
+       transform: translateY(-40%);
+        margin-bottom: 1rem;
+        text-align: center;
+        font-weight: 500;
+        color: $white;
+        
 
+        h3 {
+            padding-top: .8rem;
+            text-transform: capitalize;
+        }
+
+        p {
+           
+            text-transform: capitalize;
         }
     }
 }

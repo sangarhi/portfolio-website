@@ -4370,7 +4370,7 @@ textarea.form-control-lg {
   display: flex;
   align-items: center;
   width: 100%;
-  padding: 1rem 1.25rem;
+  padding: 1.5rem 1.5rem;
   font-size: 1rem;
   color: #212529;
   text-align: left;
@@ -4453,7 +4453,7 @@ textarea.form-control-lg {
 }
 
 .accordion-body {
-  padding: 1rem 1.25rem;
+  padding: 1.5rem 1.5rem;
 }
 
 .accordion-flush .accordion-collapse {
@@ -10997,15 +10997,88 @@ textarea.form-control-lg {
 .testimonials--card .ratings i {
   color: rgba(153, 38, 240, 0.7);
   font-size: 1rem;
+  padding: 1.3rem 0;
 }
 .testimonials--picture {
-  width: 6rem;
-  height: 8rem;
-  position: absolute;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transform: translateY(-50%);
 }
 .testimonials--picture img {
+  float: left;
+  width: 100px;
+  height: 100px;
   object-fit: cover;
-  margin: auto;
+  border: 0.325rem solid rgba(153, 38, 240, 0.7);
+}
+.testimonials--name {
+  transform: translateY(-40%);
+  margin-bottom: 1rem;
+  text-align: center;
+  font-weight: 500;
+  color: #fff;
+}
+.testimonials--name h3 {
+  padding-top: 0.8rem;
+  text-transform: capitalize;
+}
+.testimonials--name p {
+  text-transform: capitalize;
+}
+
+.portfolio {
+  padding: 4rem 0;
+}
+.portfolio button {
+  text-transform: capitalize;
+}
+
+.portfolio-box {
+  position: relative;
+  width: 100%;
+  height: 18.5rem;
+  object-fit: cover;
+  overflow: hidden;
+  margin-bottom: 1.2rem;
+  border-top: 0.5rem solid #BB6EF5;
+}
+.portfolio-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.portfolio-box .portfolio-info {
+  background-color: rgba(153, 38, 240, 0.75);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+.portfolio-box .portfolio-info .caption {
+  text-align: center;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.portfolio-box .portfolio-info .caption h4 {
+  text-transform: uppercase;
+  display: block;
+}
+.portfolio-box:hover img {
+  transform: scale(1.5);
+  transition: 1s all;
+}
+.portfolio-box:hover .portfolio-info {
+  opacity: 1;
+  visibility: visible;
+  cursor: pointer;
+  transition: 1s all;
 }
 
 /*# sourceMappingURL=style.css.map */
