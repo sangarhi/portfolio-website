@@ -1,6 +1,7 @@
 @use '../custom' as *;
+@use '../components/mixins' as *;
 
-
+// DISPLAY-2
 .display-2 {
     margin-bottom: 1rem;
     text-transform: capitalize;
@@ -27,7 +28,7 @@
     }
 }
 
-//DISPLAY-4
+// DISPLAY-4
 .display-4 {
     font-family: 'Poppins', sans-serif;
 
@@ -71,8 +72,14 @@
 
 
 
-//BORDER-RIGHT
+// BORDER-RIGHT
 .border-right {
     border-right: .1rem solid $gray-300;
     height: 100%;
+}
+
+// GRADIENT
+.gradient {
+    //background: linear-gradient(to right, rgba($primary, .95), rgba($secondary, .95));
+    @include gradient;
 }
