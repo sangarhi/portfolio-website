@@ -887,6 +887,8 @@
             console.log(detectTouchscreen());
             console.log(window.PointerEvent && ('maxTouchPoints' in navigator));
             console.log((navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0));
+            console.log((navigator.maxTouchPoints > 0));
+            console.log((navigator.msMaxTouchPoints > 0));
             console.log((window.matchMedia && window.matchMedia("(any-pointer:coarse)").matches));
             
             if (window.matchMedia("(max-width: 767px)").matches) {
