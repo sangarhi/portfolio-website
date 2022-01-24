@@ -11,7 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/vendors/css/glightbox.min.css">
-    <link href="css/bootstrap-datetimepicker.min.css" rel="stylesheet">
+    <link href="/assets/vendors/css/bootstrap-datepicker.min.css" rel="stylesheet">
 </head>
 
 <body>
@@ -687,8 +687,16 @@
                                     id="input-lastname" class="form-control shadow"></div>
                             <div class="col-lg-12 mb-3"><input type="email" placeholder="Correo Electrónico"
                                     id="input-email" class="form-control shadow"></div>
-                            <div class="col-lg-12 mb-3"><input type="text" placeholder="Fecha" id="datetime"
-                                    class="form-control shadow"></div>
+                            <div class="col-lg-12 mb-3">
+                                <div class="input-group date" id="datepicker">
+                                    <input type="text" class="form-control shadow">
+                                    <span class="input-group-append">
+                                        <span class="input-group-text bg-white d-block">
+                                            <i class="fa fa-calendar"></i>
+                                        </span>
+                                    </span>
+                                </div>
+                            </div>
                             <div class="col-lg-12 mb-3"><textarea name="Mensaje" placeholder="Mensaje" id="message"
                                     class="form-control shadow" rows="8"></textarea></div>
                         </form>
@@ -837,6 +845,12 @@
         <i class="fas fa-chevron-up"></i>
     </a>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/assets/js/bootstrap.bundle.js"></script>
+
+    <!-- <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script> -->
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
     <script src="/assets/vendors/js/glightbox.min.js"></script>
     <script type="text/javascript">
         const lightbox = GLightbox({
@@ -846,17 +860,21 @@
             'width': 900,
             'autoPlayVideos': true
         });
+    </script>
+    <script type="text/javascript">
+        $(function () {
+            console.log("date");
+            $('#datepicker').datepicker({
+                format: "dd/mm/yyyy",
+                startDate: "-366d",
+                autoclose: true,
+                language: "es",
+                ignoreReadonly: true
+            });
 
-        $("#datetime").datetimepicker({
-            format: 'yyyy-mm-dd hh:ii',
-            autoclose: true,
-            todayBtn: true
         });
     </script>
-    <script src="/assets/js/bootstrap.bundle.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.js"></script>
-    <script src="js/bootstrap-datetimepicker.min.js"></script>
+
 </body>
 
 </html>
