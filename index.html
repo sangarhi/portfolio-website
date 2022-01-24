@@ -689,7 +689,7 @@
                                     id="input-email" class="form-control shadow"></div>
                             <div class="col-lg-12 mb-3">
                                 <div class="input-group date" id="datepicker">
-                                    <input type="text" class="form-control shadow">
+                                    <input type="text" class="form-control shadow" readonly="true">
                                     <span class="input-group-append">
                                         <span class="input-group-text bg-white d-block">
                                             <i class="fa fa-calendar"></i>
@@ -874,6 +874,7 @@
             if (window.matchMedia("(max-width: 767px)").matches) {
                 $('.datepicker').attr('readonly', 'true');
                 console.log("entra");
+                
             };
 
             $('#datepicker').datepicker({
@@ -881,7 +882,8 @@
                 startDate: "-366d",
                 autoclose: true,
                 language: "es",
-                ignoreReadonly: true
+                ignoreReadonly: true,
+                allowInputToggle: true
             });
 
         });
