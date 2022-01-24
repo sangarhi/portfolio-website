@@ -891,15 +891,15 @@
             console.log((navigator.msMaxTouchPoints > 0));
             console.log((window.matchMedia && window.matchMedia("(any-pointer:coarse)").matches));
             
-            if (window.matchMedia("(max-width: 767px)").matches) {
+            // if (window.matchMedia("(max-width: 767px)").matches) {
+            //     $('.datepicker').attr('readonly', 'true');
+            //     console.log("entra");
+
+            // };
+
+            if (detectTouchscreen()) {
                 $('.datepicker').attr('readonly', 'true');
-                console.log("entra");
-
-            };
-
-            // if (detectTouchscreen()) {
-            //     $('.datepicker').prop('readonly', 'true');
-            // }
+            }
 
             $('#datepicker').datepicker({
                 format: "dd/mm/yyyy",
