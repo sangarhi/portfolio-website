@@ -862,8 +862,28 @@
         });
     </script>
     <script type="text/javascript">
+
+        function detectTouchscreen() {
+            var result = false;
+            if (window.PointerEvent && ('maxTouchPoints' in navigator)) {
+                // if Pointer Events are supported, just check maxTouchPoints
+                if ((navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)) {
+                    result = true;
+                }
+            } else {
+                // no Pointer Events...
+                if (window.matchMedia && window.matchMedia("(any-pointer:coarse)").matches) {
+                    // check for any-pointer:coarse which mostly means touchscreen
+                    result = true;
+                }
+                return result;
+            }
+        }
+
         $(function () {
             console.log("date");
+            console.log(window.matchMedia("(max-width: 767px)").matches);
+            console.log(detectTouchscreen())
             if (window.matchMedia("(max-width: 767px)").matches) {
                 $('input.datepicker').attr('readonly', 'true');
             };
