@@ -11,7 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="assets/vendors/css/glightbox.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
 </head>
 
 <body>
@@ -689,7 +690,7 @@
                                     id="input-email" class="form-control shadow"></div>
                             <div class="col-lg-12 mb-3">
                                 <div class="input-group date" id="datepicker">
-                                    <input type="text" class="form-control shadow" readonly="true">
+                                    <input type="text" class="form-control shadow">
                                     <span class="input-group-append">
                                         <span class="input-group-text bg-white d-block">
                                             <i class="fa fa-calendar"></i>
@@ -863,7 +864,23 @@
     </script>
     <script type="text/javascript">
 
-        
+        function detectTouchscreen() {
+            var result = false;
+            if (window.PointerEvent && ('maxTouchPoints' in navigator)) {
+                // if Pointer Events are supported, just check maxTouchPoints
+                if ((navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0)) {
+                    result = true;
+                }
+            } else {
+                // no Pointer Events...
+                if (window.matchMedia && window.matchMedia("(any-pointer:coarse)").matches) {
+                    // check for any-pointer:coarse which mostly means touchscreen
+                    result = true;
+                }
+                return result;
+            }
+        }
+
         $(function () {
             debugger;
             console.log("date");
@@ -874,8 +891,12 @@
             if (window.matchMedia("(max-width: 767px)").matches) {
                 $('.datepicker').attr('readonly', 'true');
                 console.log("entra");
-                
+
             };
+
+            // if (detectTouchscreen()) {
+            //     $('.datepicker').prop('readonly', 'true');
+            // }
 
             $('#datepicker').datepicker({
                 format: "dd/mm/yyyy",
